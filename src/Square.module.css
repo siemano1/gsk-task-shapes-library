@@ -1,9 +1,0 @@
-.square {
-  width: 200px;
-  height: 200px;
-  background: var(--color);
-}
-
-.square > span {
-  top: 20px;
-}

@@ -1,8 +1,16 @@
-import styles from './Circle.module.css';
+import styled from 'styled-components';
 import BaseShape, { IProps as IBaseShapeProps } from './BaseShape';
 
-type Props = Pick<IBaseShapeProps, "color" | "onClick">;
+const Circle = (props: IBaseShapeProps) => <StyledCircle {...props} name="Circle" />;
 
-const Circle = (props: Props) => <BaseShape {...props} name="Circle" shapeStyles={styles.circle} />
+const StyledCircle = styled(BaseShape)`
+  width: 200px;
+  height: 200px;
+  background: var(--color);
+  border-radius: 50%;
+  & > span {
+    top: 20px;
+  }
+`;
 
 export default Circle;
