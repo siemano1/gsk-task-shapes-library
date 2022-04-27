@@ -1,15 +1,44 @@
 {
-  "name": "@gsk-task-shapes-library/shapes",
+  "name": "@hangnail2364/shapes",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siemano1/gsk-task-shapes-library.git"
+  },
   "version": "0.1.0",
   "private": true,
+  "main": "dist/main.js",
   "peerDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@types/styled-components": "^5.1.25",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.2",
+    "rollup": "^2.70.2",
+    "tslib": "^2.4.0",
     "typescript": "^4.4.2"
-  }
+  },
+  "scripts": {
+    "build": "yarn run rollup -c",
+    "pretest": "yarn run build"
+  },
+  "types": "./dist/main.d.ts",
+  "bugs": {
+    "url": "https://github.com/siemano1/gsk-task-shapes-library/issues"
+  },
+  "homepage": "https://github.com/siemano1/gsk-task-shapes-library#readme",
+  "dependencies": {
+    "is-core-module": "^2.9.0",
+    "picomatch": "^2.3.1",
+    "estree-walker": "^1.0.1",
+    "path-parse": "^1.0.7",
+    "has": "^1.0.3",
+    "function-bind": "^1.1.1",
+    "resolve": "^1.22.0",
+    "supports-preserve-symlinks-flag": "^1.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
