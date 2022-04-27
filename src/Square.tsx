@@ -1,8 +1,15 @@
-import styles from './Square.module.css';
+import styled from 'styled-components';
 import BaseShape, { IProps as IBaseShapeProps } from './BaseShape';
 
-type Props = Pick<IBaseShapeProps, 'color' | 'onClick'>;
+const Square = (props: IBaseShapeProps) => <StyledSquare {...props} name="Square" />;
 
-const Square = (props: Props) => <BaseShape {...props} name="Square" shapeStyles={styles.square} />
+const StyledSquare = styled(BaseShape)`
+  width: 200px;
+  height: 200px;
+  background: var(--color);
+  & > span {
+    top: 20px;
+  }
+`;
 
 export default Square;

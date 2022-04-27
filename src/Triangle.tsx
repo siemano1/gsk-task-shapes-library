@@ -1,8 +1,17 @@
-import styles from './Triangle.module.css';
+import styled from 'styled-components';
 import BaseShape, { IProps as IBaseShapeProps } from './BaseShape';
 
-type Props = Pick<IBaseShapeProps, 'color' | 'onClick'>;
+const Triangle = (props: IBaseShapeProps) => <StyledTriangle {...props} name="Triangle" />;
 
-const Triangle = (props: Props) => <BaseShape {...props} name="Triangle" shapeStyles={styles.triangle} />
+const StyledTriangle = styled(BaseShape)`
+  width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 200px solid var(--color);
+  & > span {
+    top: 100px;
+  }
+`;
 
 export default Triangle;
